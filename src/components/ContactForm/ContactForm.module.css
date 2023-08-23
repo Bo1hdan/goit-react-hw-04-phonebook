@@ -1,0 +1,19 @@
+.formWrap {
+  padding: 20px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+button {
+  display: block;
+}
+label {
+  display: block;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}

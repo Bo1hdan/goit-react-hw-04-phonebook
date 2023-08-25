@@ -45,11 +45,15 @@ const App = () => {
 
     if (contactsFromLocalStorage) {
       setContacts(contactsFromLocalStorage);
+    } else {
+      setContacts([]); //
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    if (contacts !== null) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
   }, [contacts]);
 
   const filteredContacts = contacts.filter(contact =>
